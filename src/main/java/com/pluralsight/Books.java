@@ -36,15 +36,15 @@ public class Books {
         return checkedOutTo;
     }
 
-public void checkOut(String name) {
-    if (!isCheckedOut) {
-        isCheckedOut = true;
-        checkedOutTo = name;
-        System.out.println(title + " has been checked out to " + name);
-    } else {
-        System.out.println(title + " is already checked out to " + checkedOutTo);
+    public void checkOut() {
+        if (!isCheckedOut) {
+            isCheckedOut = true;
+            checkedOutTo = isbn;
+            System.out.println(title + " has been checked out to " + isbn);
+        } else {
+            System.out.println(title + " is already checked out to " + checkedOutTo);
+        }
     }
-}
 
     public void checkIn() {
         if (isCheckedOut) {
@@ -56,6 +56,7 @@ public void checkOut(String name) {
         }
     }
 }
+
 
 
 
